@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals');
-const { findConsecutiveOnes } = require('../islandArea');
+const { findConsecutiveOnes, firstOne } = require('../islandArea');
 
 describe("islandArea",() => {
     test("findConsecutiveOnes([1,1,1]) is 3", () => {
@@ -11,6 +11,11 @@ describe("islandArea",() => {
         const actual = findConsecutiveOnes([0,0,0]);
         expect(actual).toBe(expected);
     });
-    
+
+    test("firstOne() works", () => {
+        const expected = 1;
+        const actual = firstOne([0,1]);
+        expect(actual).toBe(expected);
+    })
 
 })
